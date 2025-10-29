@@ -1,0 +1,79 @@
+/* ================= TIMER PAGE ================= */
+
+.timer-tools {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin: 16px 0 24px;
+}
+
+#datetime-picker {
+  padding: 8px 12px;
+  font-size: 16px;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 250ms ease;
+}
+
+#datetime-picker:focus {
+  border-color: #4e75ff;
+}
+
+button[data-start] {
+  padding: 8px 16px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #4e75ff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 250ms ease;
+}
+
+button[data-start]:hover:not(:disabled) {
+  background-color: #6c8cff;
+}
+
+button[data-start]:disabled {
+  background-color: #b9b9b9;
+  cursor: not-allowed;
+}
+
+/* ===== Timer display ===== */
+.timer {
+  display: flex;
+  justify-content: flex-start;
+  gap: 24px;
+  align-items: flex-start;
+  font-variant-numeric: tabular-nums;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.value {
+  font-size: 48px;
+  font-weight: 600;
+  color: #2e2f42;
+}
+
+.label {
+  font-size: 14px;
+  color: #808080;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .value {
+    font-size: 36px;
+  }
+  .timer {
+    gap: 16px;
+  }
+}
